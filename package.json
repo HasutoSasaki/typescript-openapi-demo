@@ -1,0 +1,25 @@
+{
+    "name": "typescript-openapi-demo",
+    "version": "1.0.0",
+    "description": "A demo project for learning OpenAPI with TypeScript.",
+    "main": "src/app.ts",
+    "scripts": {
+        "start": "ts-node src/app.ts",
+        "build": "tsc",
+        "dev": "ts-node-dev src/app.ts"
+    },
+    "dependencies": {
+        "express": "^4.17.1",
+        "swagger-ui-express": "^4.6.3",
+        "yamljs": "^0.3.0"
+    },
+    "devDependencies": {
+        "@types/express": "^4.17.13",
+        "@types/swagger-ui-express": "^4.1.8",
+        "@types/yamljs": "^0.2.34",
+        "ts-node": "^10.4.0",
+        "ts-node-dev": "^1.1.8",
+        "typescript": "^4.5.4"
+    },
+    "license": "MIT"
+}
