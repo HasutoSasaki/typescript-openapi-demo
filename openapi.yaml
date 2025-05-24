@@ -1,0 +1,53 @@
+openapi: 3.0.0
+info:
+  title: Sample API
+  description: This is a sample API for demonstration purposes.
+  version: 1.0.0
+servers:
+  - url: http://localhost:3300
+paths:
+  /api/example:
+    get:
+      summary: Get example data
+      responses:
+        "200":
+          description: A successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "This is an example response"
+  /api/example/{id}:
+    get:
+      summary: Get example data by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: The ID of the example data
+          schema:
+            type: string
+      responses:
+        "200":
+          description: A successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "This is an example response for ID {id}"
+        "404":
+          description: Not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Example data not found"
