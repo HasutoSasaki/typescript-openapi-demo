@@ -7,7 +7,7 @@ import swaggerUi from 'swagger-ui-express';
 const app = express();
 const PORT = process.env.PORT || 3300;
 
-const openApiPath = path.join(__dirname, '../openapi.yaml');
+const openApiPath = path.join(__dirname, './api/v1.yaml');
 const swaggerDocument = YAML.load(openApiPath);
 
 app.use(express.json());
