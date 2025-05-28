@@ -23,5 +23,9 @@
         "ts-node-dev": "^1.1.8",
         "typescript": "^5.8.3"
     },
-    "license": "MIT"
+    "license": "MIT",
+    "workspaces": [
+        "packages/normal-typescript",
+        "packages/lambda-sample"
+    ]
 }
