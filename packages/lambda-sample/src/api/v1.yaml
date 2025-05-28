@@ -1,0 +1,15 @@
+openapi: 3.0.0
+info:
+  title: Sample API
+  version: 1.0.0
+  description: This is a sample API for demonstration purposes.
+
+servers:
+  - url: https://api-dev.example.com/v1
+    description: development server v1
+
+paths:
+  /share:
+    $ref: "./path/share.yaml"
+  /posts:
+    $ref: "./path/posts.yaml"

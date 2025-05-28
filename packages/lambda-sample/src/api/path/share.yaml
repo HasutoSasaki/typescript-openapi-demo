@@ -1,0 +1,37 @@
+post:
+  summary: Share a resource
+  description: Endpoint to share a resource with another user.
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            userName:
+              type: string
+              description: The name of the user with whom the resource will be shared
+            itemId:
+              type: string
+              description: The ID of the resource to be shared.
+            itemName:
+              type: string
+              description: The name of the user with whom the resource will be shared.
+  responses:
+    "200":
+      description: Resource shared successfully.
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              success:
+                type: boolean
+                example: true
+              userId:
+                type: string
+                example: "12345"
+    "400":
+      description: Bad request, invalid input data.
+    "404":
+      description: Resource or user not found.
